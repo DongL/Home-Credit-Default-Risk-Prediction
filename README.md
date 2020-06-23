@@ -1,4 +1,10 @@
-[Github Html Preview](https://htmlpreview.github.io)
+[Analysis 1](https://github.com/DongL/Home-Credit-Default-Risk-Prediction/blob/master/THR-HCDR.html) 
+
+[Analysis 2](https://github.com/DongL/Home-Credit-Default-Risk-Prediction/blob/master/THR-HCDR-NeuralNets.html) 
+
+The html file can be previewed using [Github Html Preview](https://htmlpreview.github.io).
+
+---
 
 # Home Credit Default Risk Prediction
 
