@@ -42,10 +42,13 @@ Home Credit has also supplied a set of test data and a mechanism for calculating
 Predicting whether an applicant will default on a loan is a classification task. Therefore our project team has run a series of experiments to identify an optimal classification model. Candidate model algorithms have included logistic regression, random forest, and several varieties of gradient boosting.
 
 Phases of the project have included:
-●	Phase 0: project planning,  exploratory data analysis, and baseline model
-●	Phase 1: feature engineering, benchmark model, and pipelines for pre-processing
-●	Phase 2: logging functionality, model experimentation, score comparison
-●	Phase 3: exploration of two additional classification (SVM and neural networks) and delivery of a report, visualizations, code, an executable pipeline and an executable, optimized classification model. The availability of executable artifacts is assured by the use of a bespoke logging function that stores metrics, pipeline parameters, and the serialized best estimator from each experimental run.
+
+- Phase 0: project planning,  exploratory data analysis, and baseline model
+- Phase 1: feature engineering, benchmark model, and pipelines for pre-processing
+- Phase 2: logging functionality, model experimentation, score comparison
+- Phase 3: exploration of two additional classification (SVM and neural networks) and delivery of a report, visualizations, code, an executable 
+
+pipeline and an executable, optimized classification model. The availability of executable artifacts is assured by the use of a bespoke logging function that stores metrics, pipeline parameters, and the serialized best estimator from each experimental run.
 
 ## 3. Feature Engineering and transformers
 
@@ -80,10 +83,6 @@ A ColumnTransformer pipeline was used to combine existing pipelines to create ne
 Lastly, a series of pipelines that encompass various logistic regression and ensemble-based classifiers have been created for building predictive classification models.  
 
  
- 
- 
-
-
 ## 5. Experimental results
 We tried the following things in Phase 3:
 
@@ -115,11 +114,13 @@ Feature importance in Best LightGBM model
 ## 6. Deep learning model
 Our experimentation with feed-forward neural networks comprised several stages:
 1. Setup/Configuration of tensorflow-gpu and keras 
+
 This was surprisingly difficult:
-●	Much of the documentation is out of date, or assumes you want to *build* the components rather than just install them, or omits key information. 
-●	Component version dependencies are unclear. Moreover, backwards compatibility is not preserved in the latest CUDA runtime, which means that you cannot simply install the latest versions of the various components.
-●	Runtime error messages are suppressed or unclear. 
-●	The CUDA runtime installers display messages stating that they are updating the NVidia graphics driver. These messages are misleading; the previous driver is not replaced.
+- Much of the documentation is out of date, or assumes you want to *build* the components rather than just install them, or omits key information. 
+- Component version dependencies are unclear. Moreover, backwards compatibility is not preserved in the latest CUDA runtime, which means that you cannot simply install the latest versions of the various components.
+-	Runtime error messages are suppressed or unclear. 
+-	The CUDA runtime installers display messages stating that they are updating the NVidia graphics driver. These messages are misleading; the previous driver is not replaced.
+
 2. Baseline Model - We built a simple feed-forward neural network with hidden layers 128-128 and rectified linear unit (RELU) activation. We used the keras.wrappers.scikit_learn.KerasClassifier class to facilitate grid searches, and keras.callbacks.EarlyStopping in order to minimize training time. Below is a code excerpt from our baseline model testing.
 
 def get_keras_model(architecture = [298, 128, 128], 
@@ -181,9 +182,6 @@ Since test verification is performed with models trained on the entirety of the 
 
 7. Creation of final model with best hyper-parameters - Since we wanted to train a neural network with hidden architecture of 320-320-16 and SELU activation with the entirety of the training set, we decided to use Kaggle public scores to determine when the overfitting threshold was crossed. Our first Kaggle submission was after 3 training epochs, then we increased the number of epochs by one until Kaggle scores started to fall. The optimal AUC score of 0.7549 was achieved with 6 epochs of training.
 
- 
-
-
 
 ## 7. Discussion
 
@@ -203,8 +201,6 @@ We have also tried the forward-feeding neural network models. As can be seen in 
 Here is the our best result (with LightGBM):
  
 
- 
-
 ## 9. Conclusion
 
 1. LightGBM with full features gives the best result with a test AUC of around 0.77 and a similar Kaggle submission score.
@@ -214,7 +210,7 @@ Here is the our best result (with LightGBM):
 5. The non-linear support vector machine classifier is not scalable to large datasets.  
 6. The performance of neural network models without additional features is on par with other machine learning models.
 
-10. A final thought
+## 10. A final thought
 For applied machine learning projects for problems with tabular data, feature engineering is probably the most important step. If important new important features can be created, the performance of the models can be greatly enhanced. Domain knowledge is also important as it can often lead to a more efficient treatment of the data and methodology.
 
 Feature reduction approved to be not important in this project. We do not have a very large number of features to start with and none of the features are dominating the final models. However, for some other types of problems, feature reduction and selection may be critical.
