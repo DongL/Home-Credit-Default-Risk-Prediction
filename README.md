@@ -11,14 +11,23 @@ The html file can be previewed using [Github Html Preview](https://htmlpreview.g
 ## 1. ABSTRACT
 Home Credit wants to broaden its business by lending to customers not served by traditional banks. We built a risk prediction model for lending that can use alternative data, including telco, housing, and transactional information. This task involved several steps: 
 ●	imputing missing values 
+
 ●	engineering features
+
 ●	building logging functions for scores and model serialization from test runs
+
 ●	building pipelines to ensure repeatable processes
+
 ●	running experiments iteratively
+
 ○	seeking optimal hyper-parameters for prediction models
+
 ○	fitting model parameters
+
 ○	verifying model scores against a holdout test set
+
 ●	comparing scores and qualities to identify the optimal model
+
 ●	presenting findings
 The project has enabled profitable lending to customers who are currently underserved.
 
