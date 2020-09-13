@@ -20,12 +20,12 @@ Home Credit wants to broaden its business by lending to customers not served by 
 - building pipelines to ensure repeatable processes
 
 - running experiments iteratively
+ 
+ - seeking optimal hyper-parameters for prediction models
 
- > seeking optimal hyper-parameters for prediction models
+ - fitting model parameters
 
- > fitting model parameters
-
- > verifying model scores against a holdout test set
+ - verifying model scores against a holdout test set
 
 - comparing scores and qualities to identify the optimal model
 
@@ -46,9 +46,7 @@ Phases of the project have included:
 - Phase 0: project planning,  exploratory data analysis, and baseline model
 - Phase 1: feature engineering, benchmark model, and pipelines for pre-processing
 - Phase 2: logging functionality, model experimentation, score comparison
-- Phase 3: exploration of two additional classification (SVM and neural networks) and delivery of a report, visualizations, code, an executable 
-
-pipeline and an executable, optimized classification model. The availability of executable artifacts is assured by the use of a bespoke logging function that stores metrics, pipeline parameters, and the serialized best estimator from each experimental run.
+- Phase 3: exploration of two additional classification (SVM and neural networks) and delivery of a report, visualizations, code, an executable pipeline and an executable, optimized classification model. The availability of executable artifacts is assured by the use of a bespoke logging function that stores metrics, pipeline parameters, and the serialized best estimator from each experimental run.
 
 ## 3. Feature Engineering and transformers
 
