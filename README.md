@@ -20,12 +20,11 @@ Home Credit wants to broaden its business by lending to customers not served by 
 - building pipelines to ensure repeatable processes
 
 - running experiments iteratively
- 
- - seeking optimal hyper-parameters for prediction models
+  - seeking optimal hyper-parameters for prediction models
 
- - fitting model parameters
+  - fitting model parameters
 
- - verifying model scores against a holdout test set
+  - verifying model scores against a holdout test set
 
 - comparing scores and qualities to identify the optimal model
 
